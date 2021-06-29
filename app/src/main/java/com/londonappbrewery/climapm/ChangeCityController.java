@@ -22,6 +22,7 @@ public class ChangeCityController extends AppCompatActivity
         setContentView(R.layout.change_city_layout);
         backbtn=(ImageButton)findViewById(R.id.backButton);
         txtcityname=(EditText)findViewById(R.id.queryET);
+
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
@@ -29,7 +30,8 @@ public class ChangeCityController extends AppCompatActivity
              finish();
             }
         });
-      txtcityname.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
+        txtcityname.setOnEditorActionListener(new TextView.OnEditorActionListener() {
           @Override
           public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
            String newCity=txtcityname.getText().toString();
